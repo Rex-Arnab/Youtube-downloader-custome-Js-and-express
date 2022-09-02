@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .video, #videoPreview{
+            display: none;
+        }
+        .videoMime{
+            padding: 1rem;
+            border: 2px solid red;
+        }
+        .videoMime:hover{
+            background-color: red;
+            color: white;
+        }
+    </style>
+  </head>
+  <body class="p-5">
+    <h1>Youtube Downloader</h1>
+    <div class="grid grid-cols-2 py-5 gap-5">
+      <input type="text" class="border-2 border-black p-2 rounded bg-white text-gray-700 font-bold" id="search" />
+      <div class="grid grid-cols-2 justify-between gap-5">
+<button class="p-2 rounded bg-blue-700 font-bold text-white" id="searchBtn"=>Search</button>
+      <button class="p-2 rounded bg-purple-700 font-bold text-white" id="downloadBtn"=>Download</button>
+      </div>
+    </div>
+    <h1 id="title"></h1>
+    <div class="grid grid-cols-2">
+         <div id="videoDetails" class="p-5">
+
+        </div>
+        <div id="videoPreview" class="p-5">
+            <video id="videoPlayer" controls></video>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
